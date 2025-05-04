@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Noto Sans Khmer', sans-serif;
+  background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  text-align: center;
+  color: white;
+  padding: 30px 15px;
+}
+
+h1.animated-headline {
+  font-size: 2.8rem;
+  font-weight: 700;
+  animation: fadeInSlide 1.5s ease-out forwards;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1.animated-headline:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #f0f, 0 0 20px #0ff, 0 0 30px #ff0;
+}
+
+@keyframes fadeInSlide {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.subheadline {
+  margin-bottom: 40px;
+  animation: fadeInSub 2s ease-in forwards;
+  opacity: 0;
+}
+
+.subheadline ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.subheadline-item {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+  animation: glowItem 4s infinite alternate;
+}
+
+@keyframes fadeInSub {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowItem {
+  0% { box-shadow: 0 0 5px rgba(255,255,255,0.2); }
+  100% { box-shadow: 0 0 15px rgba(255,255,255,0.5); }
+}
+
+.register-btn {
+  padding: 15px 35px;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  transition: all 0.3s ease-in-out;
+  animation: pulse 2s infinite;
+}
+
+.register-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,255,255,0.6);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0px rgba(255,255,255,0.4); }
+  50% { box-shadow: 0 0 20px rgba(255,255,255,0.8); }
+  100% { box-shadow: 0 0 0px rgba(255,255,255,0.4); }
+}
+
+@media screen and (max-width: 768px) {
+  h1.animated-headline {
+    font-size: 2rem;
+  }
+
+  .subheadline-item {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+
+  .register-btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
