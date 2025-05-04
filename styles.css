@@ -105,3 +105,54 @@ h1.animated-headline:hover {
     padding: 12px 25px;
   }
 }
+
+/* Testimonial Section Styles */
+.testimonial {
+  margin-top: 50px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: fadeInTestimonial 1.5s ease-out forwards;
+}
+
+.testimonial-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.testimonial-content {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.testimonial-btn {
+  padding: 15px 35px;
+  background: linear-gradient(45deg, #ff6ec4, #ffaf7b);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+  animation: pulse 2s infinite;
+}
+
+.testimonial-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes fadeInTestimonial {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
